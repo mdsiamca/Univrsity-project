@@ -10,7 +10,7 @@ app.use(express.json())
 
 
 const uri =
-  'mongodb+srv://Risosi:lWputw2Zbzuu6gTT@cluster0.seul0nf.mongodb.net/?retryWrites=true&w=majority'
+  'mongodb+srv://weadmin:weadmin@123@risosi.3tdqpav.mongodb.net/?retryWrites=true&w=majority'
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -20,8 +20,8 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     await client.connect()
-    const database = client.db('Risosi')
-    const dataForDatavase = database.collection('Database')
+    const database = client.db('ImagesAdd')
+    const dataForDatavase = database.collection('imagesAdd')
 
     app.post('/sendData', async (req, res) => {
       const data = req.body

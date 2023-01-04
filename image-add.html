@@ -14,7 +14,7 @@
         fetch('https://server-website-for-hackathon.onrender.com/getData')
         .then(res => res.json())
         .then(data => data.forEach(element => {
-            document.querySelector('.images').innerHTML += '<img src='+element.data+'></img>'
+            document.querySelector('.images').innerHTML += '<img src="'+element.data+'" alt="node"></img>'
         }))
     </script>
 </body>
